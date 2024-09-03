@@ -1,0 +1,112 @@
+.homeContainer{
+    /* background-image: url('../assets/homeBackground.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;  */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 30px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.kandiTitle{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.kandiString{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+@keyframes shake-vertical {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.kandiLetterBead{
+    font-size: 80px;
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 0 15px;
+    transition: transform 0.2s ease;
+}
+
+.kandiLetterBeadI{
+    font-size: 80px;
+    border: solid 3px;
+    border-radius: 5px;
+    padding: 0 30px;
+    transition: transform 0.2s ease;
+}
+
+.kandiLetterBead:hover, .kandiLetterBeadI:hover{
+    animation: shake-vertical 0.5s ease;
+}
+
+.kandiPinkBead, .kandiPurpleBead, .kandiBlueBead, .kandiGreenBead{
+    border-radius: 25px;
+}
+
+.kandiPinkBead{
+    border: 50px solid pink;
+}
+
+.kandiPurpleBead{
+    border: 50px solid rgb(236, 192, 255);
+}
+
+.kandiBlueBead{
+    border: 50px solid rgb(192, 219, 255);
+}
+
+.kandiGreenBead{
+    border: 50px solid rgb(192, 255, 197);
+}
+
+.caption{
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+.searchBar{
+    display: flex;
+    gap: 10px;
+    /* border: yellow 2px solid; */
+}
+
+.searchBar input{
+    padding: 10px;
+    font-size: 20px;
+    width: 50vh;
+    border-radius: 5px;
+}
+
+.searchBar button{
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 0 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.searchBar button:hover{
+    color: white;
+    background-color: black;
+}
