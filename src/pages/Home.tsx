@@ -5,7 +5,6 @@ export const Home = () =>{
     const navigate = useNavigate();
     const [artistName, setArtistName] = useState<string>("")
 
-
     return(
         <>
             <header>
