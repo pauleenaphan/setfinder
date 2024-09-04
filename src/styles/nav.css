@@ -1,0 +1,29 @@
+nav{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 2px solid;
+}
+
+nav .leftContainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navTitle{
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navTitle:hover{
+    color: rgb(102, 102, 207);
+}
+
+nav .icon:hover{
+    color: rgb(102, 102, 207);
+    cursor: pointer;
+}

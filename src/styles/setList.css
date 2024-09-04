@@ -1,17 +1,11 @@
-/* .kandiArtistName{
-    display: flex;
-    flex-direction: row;
-} */
-
 .kandiArtist{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     flex-direction: row;
-}
-
-.kandiLetterBeads{
-    border: 2px solid;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    margin: 20px 0px;
 }
 
 .setResults{

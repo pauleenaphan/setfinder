@@ -1,13 +1,68 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+import { useMode } from "../components/useMode";
+
+import { AiOutlineMoon, AiFillMoon,  AiOutlineSun, AiFillSun } from "react-icons/ai";
+
 import "../styles/home.css";
 
 export const Home = () =>{
     const navigate = useNavigate();
     const [artistName, setArtistName] = useState<string>("")
 
+    const [isHovered1, setIsHovered1] = useState<boolean>(false);
+    const [currMode, setCurrMode] = useState<string>("light");
+    const lsCurrMode = localStorage.getItem("currMode");
+
+    const toggleMode = () =>{
+        const newMode = currMode === "light" ? "dark" : "light";
+        setCurrMode(newMode);
+        localStorage.setItem("currMode", newMode);
+    }
+
+    useEffect(() => {
+        const savedMode = lsCurrMode;
+        if (savedMode) {
+            setCurrMode(savedMode);
+        }
+    }, [lsCurrMode]);
+
+    useMode(currMode);
+
     return(
         <div className="homeContainer">
+            <div className="modeIcon">
+                {currMode === "dark" ? (
+                    //if mode is dark then show the sun
+                    isHovered1 ? (
+                        <AiFillSun
+                            className="icon" 
+                            onMouseLeave={() => setIsHovered1(false)} 
+                            onClick={toggleMode}
+                        />
+                    ) : (
+                        <AiOutlineSun 
+                            className="icon" 
+                            onMouseEnter={() => setIsHovered1(true)} 
+                        />
+                    )
+                ) : (
+                    //if mode is light then show the moon
+                    isHovered1 ? (
+                        <AiFillMoon 
+                            className="icon" 
+                            onMouseLeave={() => setIsHovered1(false)} 
+                            onClick={toggleMode}
+                        />
+                    ) : (
+                        <AiOutlineMoon 
+                            className="icon" 
+                            onMouseEnter={() => setIsHovered1(true)} 
+                        />
+                    )
+                )}
+            </div>
             <header>
                 <div className="kandiTitle">
                     <div className="kandiBlueBead"></div>
@@ -48,7 +103,7 @@ export const Home = () =>{
             </header>
             <form className="searchBar" onSubmit={(e) =>{ 
                     e.preventDefault(); 
-                    navigate(`SetList/${artistName}`)}}>
+                    navigate(`SetList/${artistName.toUpperCase()}`)}}>
                 <input type="text" placeholder="Dj Brisket" required onChange={(e) => setArtistName(e.target.value)}/>
                 <button type="submit"> Search </button>
             </form>

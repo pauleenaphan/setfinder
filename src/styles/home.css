@@ -1,9 +1,4 @@
 .homeContainer{
-    /* background-image: url('../assets/homeBackground.jpg');
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;  */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,11 +9,27 @@
     overflow-x: hidden;
 }
 
+.modeIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 50px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.modeIcon:hover{
+    color: rgb(102, 102, 207);
+}
+
 header{
-    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
 }
+
+
+
+/* !Kandi Styling */
 
 .kandiTitle{
     display: flex;
@@ -59,25 +70,26 @@ header{
     animation: shake-vertical 0.5s ease;
 }
 
-.kandiPinkBead, .kandiPurpleBead, .kandiBlueBead, .kandiGreenBead{
+/* !Kandi Color Beads Stlying */
+.kandiPinkBead, .kandiPurpleBead, .kandiBlueBead, .kandiGreenBead, .kandiYellowBead, .kandiRedBead{
     border-radius: 25px;
 }
 
-.kandiPinkBead{
-    border: 50px solid pink;
-}
+/* !No glow */
+.kandiPinkBead { border: 50px solid pink; }
+.kandiPurpleBead { border: 50px solid rgb(236, 192, 255); }
+.kandiBlueBead { border: 50px solid rgb(192, 219, 255); }
+.kandiGreenBead { border: 50px solid rgb(192, 255, 197); }
+.kandiYellowBead { border: 50px solid rgb(251, 255, 192); }
+.kandiRedBead { border: 50px solid rgb(255, 192, 192); }
 
-.kandiPurpleBead{
-    border: 50px solid rgb(236, 192, 255);
-}
-
-.kandiBlueBead{
-    border: 50px solid rgb(192, 219, 255);
-}
-
-.kandiGreenBead{
-    border: 50px solid rgb(192, 255, 197);
-}
+/* !With glow */
+.kandiPinkBead.glow-effect { box-shadow: 0 0 15px pink; }
+.kandiPurpleBead.glow-effect { box-shadow: 0 0 15px rgb(236, 192, 255); }
+.kandiBlueBead.glow-effect { box-shadow: 0 0 15px rgb(192, 219, 255); }
+.kandiGreenBead.glow-effect { box-shadow: 0 0 15px rgb(192, 255, 197); }
+.kandiYellowBead.glow-effect { box-shadow: 0 0 15px rgb(251, 255, 192); }
+.kandiRedBead.glow-effect { box-shadow: 0 0 15px rgb(255, 192, 192); }
 
 .caption{
     font-size: 30px;
@@ -103,10 +115,11 @@ header{
     border-radius: 5px;
     padding: 0 10px;
     cursor: pointer;
-    background-color: white;
+    color: white;
+    background-color: rgb(102, 102, 207);
 }
 
 .searchBar button:hover{
-    color: white;
-    background-color: black;
+    background-color: white;
+    color: rgb(102, 102, 207);
 }
