@@ -1,0 +1,53 @@
+/* .kandiArtistName{
+    display: flex;
+    flex-direction: row;
+} */
+
+.kandiArtist{
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: row;
+}
+
+.kandiLetterBeads{
+    border: 2px solid;
+    padding: 20px;
+}
+
+.setResults{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.youtubeResultsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.topContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.youtubeResult{
+    border: 3px solid;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.setDesc{
+    width: 100%;
+}
+
+.icons{
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 3px;
+}

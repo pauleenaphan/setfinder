@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { SearchBar } from '../components/SearchBar';
+import "../styles/setList.css";
+
+import { AiOutlineYoutube, AiOutlineHeart  } from "react-icons/ai";
 
 interface Video {
     id: {
@@ -45,17 +48,32 @@ export const SetList = () =>{
     return(
         <>
             <SearchBar/>
-            <p> {artistName} </p>
-            <div className="setResults">
-                {YTList.map((set) => (
-                    <div key={set.id.videoId}>
-                        <h1>{set.snippet.title}</h1>
-                        <a href={`https://www.youtube.com/watch?v=${set.id.videoId}`} target="_blank" rel="noopener noreferrer">
-                            <img src={set.snippet.thumbnails.default.url} alt={set.snippet.title} />
-                        </a>
-                        <p>{set.snippet.description}</p>
-                    </div>
+            {/* <p> {artistName} </p> */}
+            <div className="kandiArtist">
+                {artistName.split("").map((letter) => (
+                    <div className="kandiLetterBeads">{letter}</div>
                 ))}
+            </div>
+            
+            <div className="setResults">
+                <div className="youtubeResultsContainer">
+                    {YTList.map((set) => (
+                        <div className="youtubeResult" key={set.id.videoId}>
+                            <a href={`https://www.youtube.com/watch?v=${set.id.videoId}`} target="_blank" rel="noopener noreferrer">
+                                <img src={set.snippet.thumbnails.default.url} alt={set.snippet.title} />
+                            </a>
+                            <div className="setDesc">
+                                <div className="setTitle">{set.snippet.title}</div>
+                                <p>{set.snippet.description}</p>
+                                <div className="icons">
+                                    <AiOutlineYoutube/>
+                                    <AiOutlineHeart />
+                            </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                
             </div>
         </>
     )
