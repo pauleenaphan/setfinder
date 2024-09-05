@@ -1,12 +1,28 @@
+.setListContainer{
+    overflow-x: hidden;
+}
+
 .kandiArtist{
     /* border: 2px solid blue; */
+    align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 3px;
-    margin: 20px 0px;
+    justify-content: center;
+    margin: 50px 0px 80px;
 }
+
+.kandiArtist .kandiLetterBead{
+    font-size: 35px;
+    padding: 10px 15px;
+}
+
+.kandiArtist .kandiPinkBead { border: 38px solid pink; }
+.kandiArtist .kandiPurpleBead { border: 38px solid rgb(236, 192, 255); }
+.kandiArtist .kandiBlueBead { border: 38px solid rgb(192, 219, 255); }
+.kandiArtist .kandiGreenBead { border: 38px solid rgb(192, 255, 197); }
+.kandiArtist .kandiYellowBead { border: 38px solid rgb(251, 255, 192); }
+.kandiArtist .kandiRedBead { border: 38px solid rgb(255, 192, 192); }
 
 .setResults{
     display: flex;
@@ -16,8 +32,8 @@
 
 .youtubeResultsContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .topContainer{
@@ -26,22 +42,55 @@
 }
 
 .youtubeResult{
-    border: 3px solid;
-    padding: 20px 10px;
     border-radius: 10px;
-
+    border: 3px solid;
     display: flex;
     flex-direction: row;
     gap: 10px;
+    padding: 30px 20px 20px;
+    
 }
 
-.setDesc{
+.youtubeResult img{
+    width: 40%;
+    height: 60%;
+}
+
+.setDescContainer{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.setTitle, .setDesc{
+    width: 95%;
+}
+
+.setTitle{
+    font-size: 20px;
 }
 
 .icons{
-    font-size: 40px;
     display: flex;
-    justify-content: flex-end;
+    font-size: 40px;
     gap: 3px;
+    justify-content: flex-end;
+}
+
+.heartIcon:hover{
+    color: rgb(231, 107, 128);
+    cursor: pointer;
+}
+
+
+.youtubeIcon:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.resultModeIcon:hover{
+    color: rgb(102, 102, 207);
+    cursor: pointer;
 }

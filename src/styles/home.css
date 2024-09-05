@@ -27,8 +27,6 @@ header{
     border-radius: 10px;
 }
 
-
-
 /* !Kandi Styling */
 
 .kandiTitle{
@@ -100,7 +98,6 @@ header{
 .searchBar{
     display: flex;
     gap: 10px;
-    /* border: yellow 2px solid; */
 }
 
 .searchBar input{

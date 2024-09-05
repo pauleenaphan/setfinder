@@ -3,12 +3,21 @@
   font-family: Arial, sans-serif;
 }
 
-body.dark-mode{
-  background-color: black;
-  color: white;
+body.light-mode{
+  background-color: #ffffffe8;
+  color: black;
 }
 
-body.light-mode{
-  background-color: white;
-  color: black;
+body.dark-mode{
+  background-color: #121212;
+  color: rgb(255, 255, 255);
+}
+
+a {
+  color: inherit; /* This makes the link inherit the color of the parent element */
+  text-decoration: none; 
+}
+
+a:hover {
+  color: inherit; /* Optionally set a hover color or leave it the same */
 }

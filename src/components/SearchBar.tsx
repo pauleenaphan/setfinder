@@ -11,6 +11,7 @@ import "../styles/nav.css";
 export const SearchBar = () =>{
     const navigate = useNavigate();
 
+    const [artistName, setArtistName] = useState<string>("")
     const [isHovered1, setIsHovered1] = useState<boolean>(false);
     const [isHovered2, setIsHovered2] = useState<boolean>(false);
     const [isHovered3, setIsHovered3] = useState<boolean>(false);
@@ -37,8 +38,11 @@ export const SearchBar = () =>{
         <nav>
             <div className="leftContainer">
                 <div className="navTitle" onClick={() => {navigate("/")}}> SETFINDER </div>
-                <form className="searchBar">
-                    <input type="text" placeholder="Dj Brisket"/>
+                <form className="searchBar" onSubmit={(e) =>{
+                    e.preventDefault(); 
+                    navigate(`/SetList/${artistName.toUpperCase()}`)
+                }}>
+                    <input type="text" placeholder="Svdden Death" required onChange={(e) => setArtistName(e.target.value)}/>
                     <button type="submit"> Search </button>
                 </form>
             </div>

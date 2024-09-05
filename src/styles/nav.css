@@ -5,6 +5,7 @@ nav{
     justify-content: space-between;
     margin-bottom: 40px;
     border-bottom: 2px solid;
+    /* background-color: rgb(199, 228, 255); */
 }
 
 nav .leftContainer{

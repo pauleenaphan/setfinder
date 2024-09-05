@@ -104,7 +104,7 @@ export const Home = () =>{
             <form className="searchBar" onSubmit={(e) =>{ 
                     e.preventDefault(); 
                     navigate(`SetList/${artistName.toUpperCase()}`)}}>
-                <input type="text" placeholder="Dj Brisket" required onChange={(e) => setArtistName(e.target.value)}/>
+                <input type="text" placeholder="Svdden Death" required onChange={(e) => setArtistName(e.target.value)}/>
                 <button type="submit"> Search </button>
             </form>
         </div>
