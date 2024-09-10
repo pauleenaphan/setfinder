@@ -91,6 +91,7 @@ export const SearchBar = () =>{
                     <RiUser3Fill
                         className="icon" 
                         onMouseLeave={() => setIsHovered3(false)} 
+                        onClick={() =>{navigate("/Login")}}
                     />
                 ) : (
                     <RiUser3Line
